@@ -52,4 +52,4 @@ stages:
         appType: 'webAppContainer'
         WebAppName: 'demotes'
         DockerNamespace: 'tejaswi.azurecr.io'
-        DockerRepository: 'acr'
+        DockerRepository: 'tejaswi.azurecr.io/practicesessionpipelinesjavascriptdocker:41'
