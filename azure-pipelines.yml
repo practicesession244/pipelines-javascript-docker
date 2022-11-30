@@ -37,3 +37,18 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+- stage: Release
+  displayName: Release
+  jobs:
+  - job: Release
+    displayName: Release
+    pool:
+     vmImage: $(vmImageName)
+    steps:
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'docker'
+        appType: 'webAppContainer'
+        WebAppName: 'demotes'
+        DockerRepository: 'acr'
