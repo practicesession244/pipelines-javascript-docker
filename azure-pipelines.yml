@@ -51,4 +51,5 @@ stages:
         azureSubscription: 'docker'
         appType: 'webAppContainer'
         WebAppName: 'demotes'
+        DockerNamespace: 'tejaswi.azurecr.io'
         DockerRepository: 'acr'
